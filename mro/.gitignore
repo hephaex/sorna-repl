@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*$py.class
 
 # C extensions
 *.so
@@ -19,10 +20,10 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-.idea/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -42,7 +43,8 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
-*,cover
+*.cover
+.hypothesis/
 
 # Translations
 *.mo
@@ -50,6 +52,14 @@ coverage.xml
 
 # Django stuff:
 *.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
 
 # Sphinx documentation
 docs/_build/
@@ -57,25 +67,39 @@ docs/_build/
 # PyBuilder
 target/
 
-# autoenv / direnv
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# dotenv
 .env
 .envrc
 
-# Generate binaries for images
-*/jail
-*/intra-jail
-*/jail-check
-*/intra-jail-check
-old/*/jail
-old/*/intra-jail
-old/*/jail-check
-old/*/intra-jail-check
+# virtualenv
+.venv
+venv/
+ENV/
 
-node_modules/
-yarn.lock
+# Spyder project settings
+.spyderproject
+.spyproject
 
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# vim
 .*.swp
-venv*
-
-# Local modification of build script
-build-local.sh
